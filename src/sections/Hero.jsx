@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import { useParallax, useTilt } from "@/hooks/useParallax";
+import { SiLeetcode } from "react-icons/si";
 
 const skills = [
   "React",
@@ -117,26 +118,57 @@ export const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className="text-sm text-muted-foreground">Follow me: </span>
-              {[
-                { icon: Github, href: "https://github.com/Akshat2921" },
-                {
-                  icon: Linkedin,
-                  href: "https://www.linkedin.com/in/akshat-jain-23b7bb351/",
-                },
-              ].map((social, idx) => (
-                <a
-                  key={idx}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
-                >
-                  {<social.icon className="w-5 h-5" />}
-                </a>
-              ))}
-            </div>
+<div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+  <span className="text-sm text-muted-foreground">Follow me:</span>
+
+  {[
+    {
+      icon: Github,
+      href: "https://github.com/Akshat2921",
+      label: "GitHub",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/akshat-jain-23b7bb351/",
+      label: "LinkedIn",
+    },
+    {
+      icon: SiLeetcode,
+      href: "https://leetcode.com/u/Akshat_Jain_29/",
+      label: "LeetCode",
+    },
+  ].map((social, idx) => (
+    <a
+      key={idx}
+      href={social.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={social.label}
+      className="
+        group
+        p-2
+        rounded-full
+        glass
+        hover:bg-primary/10
+        hover:text-primary
+        transition-all
+        duration-300
+        hover:scale-125
+        hover:-translate-y-1
+        hover:shadow-lg
+      "
+    >
+      <social.icon
+        className="
+          w-5 h-5
+          transition-transform
+          duration-300
+          group-hover:rotate-12
+        "
+      />
+    </a>
+  ))}
+</div>
           </div>
           {/* Right Column - Avatar Graphic (tilt/parallax) */}
           <div className="relative animate-fade-in animation-delay-300">
