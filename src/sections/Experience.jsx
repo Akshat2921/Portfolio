@@ -25,7 +25,7 @@ const milestones = [
     role: "Competitive Programmer",
     company: "LeetCode & CodeChef",
     description:
-      "Solved 500+ problems on LeetCode with a 300+ day streak, and hold a 2-star rating (1534) on CodeChef — sharpening algorithmic thinking under time pressure.",
+      "Solved 576+ problems on LeetCode (182 Easy, 311 Medium, 83 Hard) with a 300+ day streak and 19 badges earned, and hold a 2-star rating (1534) on CodeChef — sharpening algorithmic thinking under time pressure.",
     technologies: ["Algorithms", "Problem Solving", "C++"],
     current: false,
   },

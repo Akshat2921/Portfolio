@@ -56,7 +56,7 @@ export const Footer = () => {
                 target={social.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+                className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary hover:scale-110 transition-all"
               >
                 <social.icon className="w-5 h-5" />
               </a>

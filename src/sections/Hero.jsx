@@ -118,57 +118,72 @@ export const Hero = () => {
             </div>
 
             {/* Social Links */}
-<div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-  <span className="text-sm text-muted-foreground">Follow me:</span>
+            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+              <span className="text-sm text-muted-foreground">Follow me:</span>
 
-  {[
-    {
-      icon: Github,
-      href: "https://github.com/Akshat2921",
-      label: "GitHub",
-    },
-    {
-      icon: Linkedin,
-      href: "https://www.linkedin.com/in/akshat-jain-23b7bb351/",
-      label: "LinkedIn",
-    },
-    {
-      icon: SiLeetcode,
-      href: "https://leetcode.com/u/Akshat_Jain_29/",
-      label: "LeetCode",
-    },
-  ].map((social, idx) => (
-    <a
-      key={idx}
-      href={social.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      title={social.label}
-      className="
-        group
-        p-2
-        rounded-full
-        glass
-        hover:bg-primary/10
-        hover:text-primary
-        transition-all
-        duration-300
-        hover:scale-125
-        hover:-translate-y-1
-        hover:shadow-lg
-      "
-    >
-      <social.icon
-        className="
-          w-5 h-5
-          transition-transform
-          duration-300
-          group-hover:rotate-12
-        "
-      />
-    </a>
-  ))}
-</div>
+              {[
+                {
+                  icon: Github,
+                  href: "https://github.com/Akshat2921",
+                  label: "GitHub",
+                },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/akshat-jain-23b7bb351/",
+                  label: "LinkedIn",
+                },
+                {
+                  icon: SiLeetcode,
+                  href: "https://leetcode.com/u/Akshat_Jain_29/",
+                  label: "LeetCode",
+                },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={social.label}
+                  className="
+                    group
+                    relative
+                    p-2
+                    rounded-full
+                    glass
+                    hover:bg-primary/10
+                    hover:text-primary
+                    transition-all
+                    duration-300
+                    hover:scale-125
+                    hover:-translate-y-1
+                    hover:shadow-lg
+                  "
+                >
+                  <social.icon
+                    className="
+                      w-5 h-5
+                      transition-transform
+                      duration-300
+                      group-hover:rotate-12
+                    "
+                  />
+                  <span
+                    className="
+                      pointer-events-none
+                      absolute -top-9 left-1/2 -translate-x-1/2
+                      whitespace-nowrap
+                      rounded-md glass px-2 py-1
+                      text-xs text-primary
+                      opacity-0 translate-y-1
+                      transition-all duration-300
+                      group-hover:opacity-100 group-hover:translate-y-0
+                    "
+                  >
+                    {social.label}
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
           {/* Right Column - Avatar Graphic (tilt/parallax) */}
           <div className="relative animate-fade-in animation-delay-300">
@@ -183,6 +198,7 @@ export const Hero = () => {
                 ref={tilt.ref}
                 onMouseMove={tilt.onMouseMove}
                 onMouseLeave={tilt.onMouseLeave}
+                data-no-trail
                 style={{
                   ...tilt.style,
                   transition: "transform 0.2s ease-out",
@@ -222,7 +238,7 @@ export const Hero = () => {
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">500+</div>
+                  <div className="text-2xl font-bold text-primary">576+</div>
                   <div className="text-xs text-muted-foreground">
                     LeetCode Solved
                   </div>

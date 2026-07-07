@@ -1,6 +1,6 @@
 # Akshat Jain — Personal Portfolio
 
-A responsive, animated personal portfolio built with React, Vite, and Tailwind CSS. Features scroll-triggered reveal animations, parallax background layers, a mouse-tilt hero card, and an interactive project showcase.
+A responsive, animated personal portfolio built with React, Vite, and Tailwind CSS. Features scroll-triggered reveal animations, parallax background layers, a mouse-tilt hero card, and an interactive project showcase, a glowing cursor trail, and a click ripple effect.
 
 🔗 **Live site:** [https://portfolio-theta-seven-4jzx83f6c5.vercel.app](https://portfolio-theta-seven-4jzx83f6c5.vercel.app)
 📂 **Repository:** [https://github.com/Akshat2921/Portfolio](https://github.com/Akshat2921/Portfolio)
@@ -11,8 +11,8 @@ A responsive, animated personal portfolio built with React, Vite, and Tailwind C
 
 | Section | Description |
 |---|---|
-| Hero | Intro, resume view/download, parallax background |
-| About | Bio, education, and skill highlights |
+| Hero | Intro, resume view/download, parallax background, floating stat badges & social links (GitHub, LinkedIn, LeetCode) |
+| About | Bio, education, and skill highlights cards |
 | Projects | PixelCraft, Nightwave, ShopEase, Tadka |
 | Achievements | LeetCode / CodeChef / DSA stats |
 | Contact | Working contact form wired to EmailJS |
@@ -22,7 +22,7 @@ A responsive, animated personal portfolio built with React, Vite, and Tailwind C
 - **React 19** — UI library
 - **Vite** (rolldown) — build tool & dev server
 - **Tailwind CSS v4** — styling
-- **lucide-react** — icon set
+ **lucide-react** / **react-icons** — icon sets
 - **EmailJS** — serverless contact form
 - **Vercel** — hosting & deployment
 
@@ -76,7 +76,7 @@ final-portfolio/
 ├── public/
 │   └── Akshat_Jain_Resume.pdf   # resume shown via "View / Download CV"
 ├── src/
-│   ├── components/               # reusable UI: buttons, reveal wrapper, project graphics
+│   ├── components/               # reusable UI: buttons, reveal wrapper, project graphics, CursorTrail (glowing mouse trail), PageRipple (click effect)
 │   ├── hooks/                    # useParallax, useReveal
 │   ├── layout/                   # Navbar, Footer
 │   └── sections/                 # Hero, About, Projects, Achievements, Contact, Experience

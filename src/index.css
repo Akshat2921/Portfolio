@@ -181,4 +181,48 @@
         color-mix(in srgb, var(--color-primary) 35%, transparent),
       0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
   }
+
+  /* Click "portal" ripple - radiates from the tap point outward in
+     every direction at once to cover the whole screen, holds briefly,
+     then fades back out. Driven by a real keyframe animation (not a
+     transition) so it always plays smoothly from a fresh element. */
+  .ripple-overlay {
+    position: fixed;
+    border-radius: 9999px;
+    pointer-events: none;
+    z-index: 9999;
+    background: radial-gradient(
+      circle at center,
+      #ffffff 0%,
+      color-mix(in srgb, var(--color-primary) 88%, white) 14%,
+      var(--color-primary) 38%,
+      color-mix(in srgb, var(--color-highlight) 65%, var(--color-primary)) 66%,
+      color-mix(in srgb, var(--color-primary) 55%, var(--color-highlight)) 100%
+    );
+    transform: scale(0);
+    opacity: 1;
+    animation-name: ripple-radiate;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+  }
+
+  @keyframes ripple-radiate {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    44% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    69% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.06);
+      opacity: 0;
+    }
+  }
 }

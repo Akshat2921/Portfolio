@@ -18,7 +18,7 @@ const highlights = [
     icon: Database,
     title: "Strong Fundamentals",
     description:
-      "Grounded in DSA, OOP, DBMS and OS — 500+ problems solved on LeetCode.",
+      "Grounded in DSA, OOP, DBMS and OS — 576+ problems solved on LeetCode.",
   },
   {
     icon: GraduationCap,

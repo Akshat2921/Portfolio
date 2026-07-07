@@ -1,13 +1,19 @@
-import { Trophy, Flame, Target, Code } from "lucide-react";
+import { Trophy, Award, Target, Code } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { useParallax } from "@/hooks/useParallax";
 
 const stats = [
   {
     icon: Code,
-    value: "500+",
+    value: "576+",
     label: "LeetCode Problems Solved",
-    detail: "With a 300+ day solving streak",
+    detail: "182 Easy • 311 Medium • 83 Hard — 300+ day streak",
+  },
+  {
+    icon: Award,
+    value: "19",
+    label: "LeetCode Badges",
+    detail: "Including the 500-Day Badge for sustained daily practice",
   },
   {
     icon: Trophy,
@@ -20,12 +26,6 @@ const stats = [
     value: "400+",
     label: "Striver's DSA Sheet",
     detail: "Problems completed across core DSA topics",
-  },
-  {
-    icon: Flame,
-    value: "4",
-    label: "Shipped Projects",
-    detail: "PixelCraft, Nightwave, ShopEase & Tadka",
   },
 ];
 
